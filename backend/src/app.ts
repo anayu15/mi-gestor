@@ -73,8 +73,19 @@ const limiter = rateLimit({
 
 app.use(limiter);
 
-// Health check
+// Health check (for deployment platforms like Render)
 app.get('/health', (req, res) => {
+  res.json({
+    success: true,
+    data: {
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+      environment: config.env,
+    },
+  });
+});
+
+app.get('/api/health', (req, res) => {
   res.json({
     success: true,
     data: {
