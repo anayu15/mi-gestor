@@ -1,0 +1,29 @@
+CONTRATO DE TRABAJADOR AUTÓNOMO ECONÓMICAMENTE DEPENDIENTE (TRADE)
+=====================================================================
+
+Este es un documento de prueba para el sistema de gestión de documentos.
+
+DATOS DEL TRABAJADOR AUTÓNOMO:
+- Nombre: Juan Pérez García
+- NIF: 12345678A
+- Domicilio: Calle Principal, 123
+
+DATOS DEL CLIENTE:
+- Empresa: Tech Solutions S.L.
+- CIF: B87654321
+- Domicilio: Avenida Tecnológica, 456
+
+OBJETO DEL CONTRATO:
+El presente contrato tiene por objeto regular la prestación de servicios profesionales
+de desarrollo de software por parte del trabajador autónomo económicamente dependiente.
+
+DURACIÓN:
+- Fecha de inicio: 01/01/2026
+- Fecha de vencimiento: 31/12/2026
+
+CONDICIONES:
+1. Facturación mensual
+2. Dependencia económica del 75%
+3. Cotización en régimen especial de trabajadores autónomos
+
+Firmado en Madrid, a 1 de enero de 2026

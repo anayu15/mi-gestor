@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" fill="white"/>
+  <text x="50" y="50" font-family="Arial" font-size="24" fill="black" font-weight="bold">FACTURA</text>
+  <text x="50" y="100" font-family="Arial" font-size="16" fill="black">Empresa Test S.L.</text>
+  <text x="50" y="130" font-family="Arial" font-size="14" fill="black">CIF: B12345678</text>
+  <text x="50" y="160" font-family="Arial" font-size="14" fill="black">Fecha: 15/01/2024</text>
+  <text x="50" y="190" font-family="Arial" font-size="14" fill="black">Nº Factura: FAC-2024-001</text>
+
+  <line x1="50" y1="220" x2="750" y2="220" stroke="black" stroke-width="2"/>
+
+  <text x="50" y="260" font-family="Arial" font-size="14" fill="black">Concepto: Servicios de consultoría informática</text>
+
+  <line x1="50" y1="290" x2="750" y2="290" stroke="black" stroke-width="1"/>
+
+  <text x="50" y="330" font-family="Arial" font-size="14" fill="black">Base imponible: 1.000,00 €</text>
+  <text x="50" y="360" font-family="Arial" font-size="14" fill="black">IVA (21%): 210,00 €</text>
+  <text x="50" y="390" font-family="Arial" font-size="14" fill="black">IRPF (15%): 150,00 €</text>
+
+  <line x1="50" y1="420" x2="750" y2="420" stroke="black" stroke-width="2"/>
+
+  <text x="50" y="460" font-family="Arial" font-size="18" fill="black" font-weight="bold">TOTAL: 1.060,00 €</text>
+</svg>

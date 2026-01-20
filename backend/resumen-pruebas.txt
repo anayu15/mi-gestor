@@ -1,0 +1,57 @@
+===================================================================
+RESUMEN DE DATOS DE PRUEBA - USUARIO: test@migestor.com
+===================================================================
+
+DATOS EN ENERO 2026:
+-------------------
+✅ 07 enero: Gasto PAGADO - Hosting y dominio (150€ + IVA = 181.50€)
+✅ 09/10 enero: Ingreso PAGADO - Factura 2026-001 (1500€ + IVA - IRPF = 1590€)
+⏱ 11 enero: Gasto PENDIENTE - Material de oficina (300€ + IVA = 363€)
+⏱ 17/18 enero: Ingreso PENDIENTE - Factura 2025-002 (1500€ + IVA - IRPF = 1590€)
+
+CÓMO VERIFICAR EN EL FRONTEND:
+------------------------------
+
+1. TESORERÍA (http://localhost:3001/tesoreria)
+   - Seleccionar rango: 01/01/2026 - 31/01/2026
+   - Deberías ver:
+     * Columna "Ingresos (Real / Potencial)" con dos líneas:
+       - Real (oscuro): 1590€
+       - Potencial (claro): +1590€
+     * Columna "Gastos (Real / Potencial)" con dos líneas:
+       - Real (oscuro): 181.50€ y 363€
+       - Potencial (claro): +363€
+     * Al expandir cada día, verás badges:
+       - "✓ Pagado" (azul) para transacciones reales
+       - "⏱ Pendiente" (gris) para transacciones potenciales
+     * En el resumen final:
+       - Saldo real: 1045.50€ (solo pagos efectuados)
+       - Saldo proyectado: 2635.50€ (incluye pendientes)
+
+2. LISTA DE FACTURAS (http://localhost:3001/facturas)
+   - Deberías ver las 4 facturas/gastos de enero
+   - Cada uno tiene un badge clickeable:
+     * Verde "Pagado" o Amarillo "Pendiente"
+   - Al hacer clic:
+     * De Pendiente → Pagado: abre modal para fecha y método de pago
+     * De Pagado → Pendiente: cambio directo sin modal
+   - Después del cambio, refrescar y verificar que:
+     * El estado cambió en la lista
+     * La tesorería refleja el cambio (actualizar la página)
+
+3. FORMULARIOS DE EDICIÓN
+   - Abrir cualquier factura en edición
+   - Deberías ver un campo "Estado" con dropdown
+   - Cambiar entre Pendiente/Pagado
+   - Guardar
+   - Verificar que el cambio se reflejó
+
+ENDPOINTS PARA PRUEBAS MANUALES:
+--------------------------------
+GET  /api/cashflow/daily?start=2026-01-01&end=2026-01-31
+GET  /api/invoices
+GET  /api/expenses
+PATCH /api/invoices/:id/mark-paid
+PATCH /api/expenses/:id/mark-paid
+
+===================================================================
